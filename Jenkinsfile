@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
           steps {
             echo "Copying Jugoterapia package"
-            sh "./gradlew clean build "
+            sh "gradle clean build "
             echo "Done!"
           }
         }
