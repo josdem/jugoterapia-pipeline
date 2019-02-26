@@ -2,14 +2,21 @@
 pipeline {
     agent any
     stages {
-        stage('Stoping') {
+        stage('Stop') {
             steps {
               echo "Stoping Jugoterapia"
               sh "sudo systemctl stop jugoterapia-webflux"
               echo "Done!"
             }
         }
-        stage('Deploying') {
+        stage('Build') {
+          steps {
+            echo "Copying Jugoterapia package"
+            sh "./gradlew clean build "
+            echo "Done!"
+          }
+        }
+        stage('Deploy') {
           steps {
             echo "Copying Jugoterapia package"
             sh "cp ${WORKSPACE}/build/libs/jugoterapia-webflux-0.0.1-SNAPSHOT.jar /opt/jenkins/jugoterapia-webflux-0.0.1-SNAPSHOT.jar"
