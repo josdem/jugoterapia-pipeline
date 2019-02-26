@@ -2,9 +2,11 @@
 pipeline {
     agent any
     stages {
-        stage('Stage 1') {
+        stage('Stop') {
             steps {
-                echo 'Hello world!'
+              echo "Stoping Jugoterapia!"
+              sudo systemctl stop jugoterapia-webflux
+              echo "Done!"
             }
         }
     }
