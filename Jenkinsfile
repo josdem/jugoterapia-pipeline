@@ -12,7 +12,10 @@ pipeline {
         stage('Build') {
           steps {
             echo "Copying Jugoterapia package"
-            sh "gradle clean build "
+            gradle {
+              tasks('clean')
+              tasks('build')
+            }
             echo "Done!"
           }
         }
