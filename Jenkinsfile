@@ -12,7 +12,7 @@ pipeline {
       stage ('Start Jugoterapia Webflux Job') {
         steps {
           echo 'Stoping Jugoterapia'
-          build job: 'josdem/jugoterapia-webflux/master'
+          build job: 'jugoterapia-webflux'
           echo 'Done!'
         }
       }
