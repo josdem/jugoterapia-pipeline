@@ -10,9 +10,11 @@ pipeline {
         }
       }
       stage ('Start Jugoterapia Webflux Job') {
-        echo 'Stoping Jugoterapia'
-        build job: 'josdem/jugoterapia-webflux/master'
-        echo 'Done!'
+        steps {
+          echo 'Stoping Jugoterapia'
+          build job: 'josdem/jugoterapia-webflux/master'
+          echo 'Done!'
+        }
       }
     }
 }
