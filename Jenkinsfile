@@ -11,7 +11,7 @@ pipeline {
     }
     stage ('Start Jugoterapia Webflux Job') {
       steps {
-        echo 'Stoping Jugoterapia'
+        echo 'Starting Jugoterapia Build Job'
         build job: 'jugoterapia-webflux'
         echo 'Done!'
       }
