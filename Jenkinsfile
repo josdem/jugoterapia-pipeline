@@ -2,6 +2,13 @@
 pipeline {
   agent any
   stages {
+    stage('Build Jugoterapia') {
+      steps {
+        echo 'Building Jugoterapia'
+        build job: 'jugoterapia-mobile-debug'
+        echo 'Done!'
+      }
+    }
     stage('Stop Jugoterapia') {
       steps {
         echo 'Stoping Jugoterapia'
