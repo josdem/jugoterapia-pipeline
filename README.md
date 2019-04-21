@@ -1,4 +1,4 @@
-Jugoterapia Cucumber
+Jugoterapia Services Pipeline
 ----------------------------------------------
 
 This project does Jenkins pipelines for Jugoterapia project, which is an Android application mainly focused in improve your healty based in juice recipes, it is exposing recipes and beverages as API services. Please go here for more information:
